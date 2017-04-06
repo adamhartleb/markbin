@@ -1,0 +1,24 @@
+.header {
+  background-color: $brand-color;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
+}
+
+.header__nav {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $site-width;
+  padding: $large-space;
+}
+
+.header__nav-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: bold;
+}
