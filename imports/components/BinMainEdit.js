@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor'
 import { createContainer } from 'meteor/react-meteor-data'
 import { Bins } from '../api/bins'
 import CodeMirror from 'react-codemirror'
-import 'codemirror/mode/markdown/markdown'
+import 'codemirror/mode/javascript/javascript'
 
 import Header from './Header'
 
@@ -31,7 +31,7 @@ class BinMainEdit extends Component {
             <CodeMirror
               value={this.props.bin[0].body}
               onChange={this.handleEditorChange}
-              options={{ mode: 'markdown', lineNumbers: true }} />
+              options={{ mode: 'javascript', lineNumbers: true }} />
           </div>
         </div>
       </div>
