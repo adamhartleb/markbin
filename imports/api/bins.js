@@ -22,7 +22,8 @@ Meteor.methods({
       body: '',
       title: 'Untitled',
       userId: this.userId,
-      createdAt: moment().format('dddd, MMMM Do YYYY, h:mm:ss a')
+      createdAt: moment().format('dddd, MMMM Do YYYY, h:mm:ss a'),
+      updatedAt: 0
     })
   },
   'bins.remove' (_id) {
@@ -31,6 +32,16 @@ Meteor.methods({
     Bins.remove({
       _id,
       userId: this.userId
+    })
+  },
+  'bins.update' (_id, body) {
+    if (!this.userId) throw new Meteor.Error('Not Authorized')
+
+    Bins.update({ _id }, {
+      $set: {
+        updatedAt: moment().format('dddd, MMMM Do YYYY, h:mm:ss a'),
+        body
+      }
     })
   }
 })

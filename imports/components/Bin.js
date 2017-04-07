@@ -10,7 +10,6 @@ const Bin = ({ _id, title, body, createdAt }) => {
     <div className='bin-list__bin'>
       <div>
         <Link to={`/bins/${_id}`}><h3>{title}</h3></Link>
-        <p>{body}</p>
         <p>{createdAt}</p>
       </div>
       <button

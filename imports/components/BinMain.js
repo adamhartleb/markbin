@@ -16,6 +16,7 @@ class BinMain extends Component {
         <div className='bin-list'>
           <h1>{bin[0].title}</h1>
           <h3>{bin[0].createdAt}</h3>
+          <p>{bin[0].body}</p>
         </div>
       </div>
     )
