@@ -11,6 +11,9 @@
   margin: 0 auto;
   max-width: $site-width;
   padding: $large-space;
+  h1 {
+    color: white;
+  }
 }
 
 .header__nav-button {

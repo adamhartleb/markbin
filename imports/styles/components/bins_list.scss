@@ -1,0 +1,36 @@
+.bin-list {
+  max-width: $site-width;
+  margin: 0 auto;
+  padding: 0 $large-space;
+  margin-top: $large-space;
+}
+
+.bin__button {
+  background-color: $brand-color;
+  border: none;
+  font-family: $main-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: $large-space;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.create {
+  margin-bottom: $large-space;
+}
+
+.delete {
+  background-color: #e74c3c;
+}
+
+.bin-list__bin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: $large-space;
+  border-radius: 4px;
+  padding: $large-space;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+}

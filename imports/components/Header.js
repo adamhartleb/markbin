@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Meteor } from 'meteor/meteor'
 import { Accounts } from 'meteor/accounts-base'
 import { createContainer } from 'meteor/react-meteor-data'
+import { Link } from 'react-router'
 
 class Header extends Component {
   handleLogout () {
@@ -19,9 +20,13 @@ class Header extends Component {
     } else {
       return (
         <div>
-          <button className='header__nav-button'>Login</button>
+          <Link to='/'>
+            <button className='header__nav-button'>Login</button>
+          </Link>
           <span> / </span>
-          <button className='header__nav-button'>Sign Up</button>
+          <Link to='/signup'>
+            <button className='header__nav-button'>Sign Up</button>
+          </Link>
         </div>
       )
     }
@@ -30,7 +35,7 @@ class Header extends Component {
     return (
       <div className='header'>
         <div className='header__nav'>
-          <h1>Markbin</h1>
+          <h1>CodeShare</h1>
           {this.renderLoginLogout()}
         </div>
       </div>

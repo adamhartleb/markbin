@@ -9,6 +9,15 @@ body {
   background: #fefefe;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold
+}
+
 input[type=text], input[type=email], input[type=password], textarea {
   border: 1px solid $input-border;
 }
