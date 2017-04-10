@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { createContainer } from 'meteor/react-meteor-data'
 import { Meteor } from 'meteor/meteor'
 import { Bins } from '../api/bins'
-import { markdown } from 'markdown'
+import CodeMirror from 'react-codemirror'
+import 'codemirror/mode/javascript/javascript'
 
 import Header from './Header'
 
@@ -16,7 +17,11 @@ class BinMain extends Component {
         <div className='bin-list'>
           <h1>{bin[0].title}</h1>
           <h3>{bin[0].createdAt}</h3>
-          <p>{bin[0].body}</p>
+          <div className='codemirror'>
+            <CodeMirror
+              value={this.props.bin[0].body}
+              options={{ mode: 'javascript', lineNumbers: true, readOnly: true }} />
+          </div>
         </div>
       </div>
     )

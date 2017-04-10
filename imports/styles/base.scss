@@ -15,7 +15,11 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 0;
 }
 
 input[type=text], input[type=email], input[type=password], textarea {
