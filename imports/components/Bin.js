@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meteor } from 'meteor/meteor'
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
 
 const Bin = ({ _id, title, body, createdAt }) => {
   const removeBin = (id) => {
@@ -12,9 +12,14 @@ const Bin = ({ _id, title, body, createdAt }) => {
         <Link to={`/bins/${_id}`}><h3>{title}</h3></Link>
         <p>{createdAt}</p>
       </div>
-      <button
-        onClick={() => removeBin(_id)}
-        className='bin__button delete'>Remove</button>
+      <div>
+        <button
+          onClick={() => browserHistory.push(`/bins/${_id}/edit`)}
+          className='bin__button delete'>Edit</button>
+        <button
+          onClick={() => removeBin(_id)}
+          className='bin__button delete'>Remove</button>
+      </div>
     </div>
   )
 }
