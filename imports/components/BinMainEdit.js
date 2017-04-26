@@ -40,7 +40,7 @@ class BinMainEdit extends Component {
 }
 
 export default createContainer(props => {
-  Meteor.subscribe('canSee', props.params.id)
+  Meteor.subscribe('canSeeEdit', props.params.id)
 
   return {
     bin: Bins.find({ _id: props.params.id }).fetch()

@@ -12,6 +12,9 @@ if (Meteor.isServer) {
   Meteor.publish('canSee', function (thisBin) {
     return Bins.find({ _id: thisBin })
   })
+  Meteor.publish('canSeeEdit', function (thisBin) {
+    return Bins.find({ _id: thisBin, userId: this.userId })
+  })
 }
 
 Meteor.methods({
