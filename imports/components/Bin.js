@@ -12,7 +12,7 @@ const Bin = ({ _id, title, body, createdAt }) => {
         <Link to={`/bins/${_id}`}><h3>{title}</h3></Link>
         <p>{createdAt}</p>
       </div>
-      <div>
+      <div className='btn__flex'>
         <button
           onClick={() => browserHistory.push(`/bins/${_id}/edit`)}
           className='bin__button delete'>Edit</button>

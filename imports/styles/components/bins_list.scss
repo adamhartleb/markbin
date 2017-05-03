@@ -34,6 +34,17 @@
 .delete {
   margin-left: $large-space;
   background-color: #e74c3c;
+  @media (max-width: 483px) {
+    flex: 1;
+    margin-left: 0;
+    margin-top: $large-space;
+  }
+}
+
+.btn__flex {
+  @media (max-width: 483px) {
+    display: flex;
+  }
 }
 
 .bin-list__bin {
@@ -44,4 +55,7 @@
   border-radius: 4px;
   padding: $large-space;
   box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+  @media (max-width: 483px) {
+    flex-direction: column;
+  }
 }
