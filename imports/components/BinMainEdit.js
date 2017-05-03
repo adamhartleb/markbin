@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Meteor } from 'meteor/meteor'
 import { createContainer } from 'meteor/react-meteor-data'
 import { Bins } from '../api/bins'
+import { Link } from 'react-router'
 import CodeMirror from 'react-codemirror'
 import 'codemirror/mode/javascript/javascript'
 
@@ -27,6 +28,7 @@ class BinMainEdit extends Component {
       <div>
         <Header />
         <div className='bin-list'>
+          <Link to='/bins' className='bin__button back'>Back</Link>
           <div className='codemirror'>
             <CodeMirror
               value={this.props.bin[0].body}

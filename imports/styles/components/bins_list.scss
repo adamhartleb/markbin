@@ -21,7 +21,18 @@
   margin-bottom: $large-space;
 }
 
+.back {
+  display: inline-block;
+  margin-top: $large-space;
+}
+
+.codemirror {
+  margin-top: $large-space * 2;
+  text-decoration: none;
+}
+
 .delete {
+  margin-left: $large-space;
   background-color: #e74c3c;
 }
 
